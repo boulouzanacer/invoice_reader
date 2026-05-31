@@ -47,6 +47,11 @@ Route::middleware(['auth'])->group(function () {
         return view('settings');
     })->name('settings');
 
+    // API Documentation
+    Route::get('/api-doc', function () {
+        return view('api-doc');
+    })->name('api-doc');
+
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

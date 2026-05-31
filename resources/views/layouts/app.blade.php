@@ -57,6 +57,14 @@
                         <span class="ml-3 font-medium">Events</span>
                     </a>
 
+                    <!-- API Doc -->
+                    <a href="{{ route('api-doc') }}" class="flex items-center px-4 py-3 text-gray-700 rounded-lg transition-colors {{ request()->routeIs('api-doc') ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-100' }}">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H6.75m0 0H4.875M6.75 0V2.25m0 3.375v2.25m2.25 0H11.25M13.5 10.125h2.25m-2.25 3h2.25m-2.25 3h2.25M9 13.125h2.25M9 16.125h2.25M9 19.125h2.25M4.5 20.25h15" />
+                        </svg>
+                        <span class="ml-3 font-medium">API Doc</span>
+                    </a>
+
                     <!-- Users (Admin only) -->
                     @if(auth()->user()->role_id === 0)
                     <a href="{{ route('users.index') }}" class="flex items-center px-4 py-3 text-gray-700 rounded-lg transition-colors {{ request()->routeIs('users.*') ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-100' }}">
